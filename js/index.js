@@ -243,7 +243,7 @@ $(function(){
             marginTop:-num*clienth
         })
     })
-    mouseWheel($(".conbox")[0],mouseup,mousedown);
+    mouseWheel($(".conbox")[0],mousedown,mouseup);
     //小屏导航
     var flag2=true;
     $(".xiala").click(function(){
