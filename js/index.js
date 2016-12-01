@@ -72,46 +72,12 @@ $(function(){
         })
     }
     $(".cebian li").click(function(){
-        var that=$(this).index();
-        if($(this).index()==$(".con").length-1){
-            $(".jiantou").css("display","none");
-        }else{
-            $(".jiantou").css("display","block");
-        }
         if($(this).index()>num){
-            num=$(this).index();
-            if($(this).index()*clienth>=clienth){
-                $(".lianxi1").animate({opacity:1},800);
-            }else{
-                $(".lianxi1").animate({opacity:0},800);
-            }
-            $(".conbox").css({
-                marginTop:-($(this).index())*clienth
-            })
-            $(".cebian li").each(function(index,obj){
-                if(that==index){
-                    $(obj).css({background:"#333"})
-                }else {
-                    $(obj).css({background: "rgba(0,0,0,0)"})
-                }
-            })
+            num=$(this).index()-1;
+            mouseup();
         }else if($(this).index()<num){
-            num=$(this).index();
-            if($(this).index()*clienth>=clienth){
-                $(".lianxi1").animate({opacity:1},800);
-            }else{
-                $(".lianxi1").animate({opacity:0},800);
-            }
-            $(".conbox").css({
-                marginTop:-($(this).index())*clienth
-            })
-            $(".cebian li").each(function(index,obj){
-                if(that==index){
-                    $(obj).css({background:"#333"})
-                }else {
-                    $(obj).css({background: "rgba(0,0,0,0)"})
-                }
-            })
+            num=$(this).index()+1;
+            mousedown();
         }
     }).mouseover(function(){
         $(".cebian p").eq($(this).index()).css("display","block");
@@ -125,7 +91,7 @@ $(function(){
         if(num==0){
             flag=true;
             $(".tu4").css({
-                animation:"ship 2s ease",
+                animation:"ship 1s ease",
                 opacity:1
             });
         }else{
@@ -137,14 +103,14 @@ $(function(){
         $(".shu").each(function(index,obj){
             if(num==index+1){
                 flag=true;
-                $(obj).css({animation:"shu 2s ease",opacity:1});
+                $(obj).css({animation:"shu 1s ease",opacity:1});
             }else{
                 $(obj).css({animation:"none",opacity:0});
             }
         })
         $(".title2").each(function(index,obj){
             if(num==index+1){
-                $(obj).css({animation:"titles 2s ease",opacity:1})
+                $(obj).css({animation:"titles 1s ease",opacity:1})
             }else{
                 $(obj).css({animation:"none",opacity:0})
             }
@@ -154,7 +120,7 @@ $(function(){
         if(num==0){
             flag=true;
             $(".tu4").css({
-                animation:"ship 2s ease",
+                animation:"ship 1s ease",
                 opacity:1
             });
         }else{
@@ -166,14 +132,14 @@ $(function(){
         $(".shu").each(function(index,obj){
             if(num==index+1){
                 flag=true;
-                $(obj).css({animation:"shu 2s ease",opacity:1});
+                $(obj).css({animation:"shu 1s ease",opacity:1});
             }else{
                 $(obj).css({animation:"none",opacity:0});
             }
         })
         $(".title2").each(function(index,obj){
             if(num==index+1){
-                $(obj).css({animation:"titles 2s ease",opacity:1})
+                $(obj).css({animation:"titles 1s ease",opacity:1})
             }else{
                 $(obj).css({animation:"none",opacity:0})
             }
@@ -183,7 +149,7 @@ $(function(){
         if(num==0){
             flag=true;
             $(".tu4").css({
-                animation:"ship 2s ease",
+                animation:"ship 1s ease",
                 opacity:1
             });
         }else{
@@ -195,14 +161,14 @@ $(function(){
         $(".shu").each(function(index,obj){
             if(num==index+1){
                 flag=true;
-                $(obj).css({animation:"shu 2s ease",opacity:1});
+                $(obj).css({animation:"shu 1s ease",opacity:1});
             }else{
                 $(obj).css({animation:"none",opacity:0});
             }
         })
         $(".title2").each(function(index,obj){
             if(num==index+1){
-                $(obj).css({animation:"titles 2s ease",opacity:1})
+                $(obj).css({animation:"titles 1s ease",opacity:1})
             }else{
                 $(obj).css({animation:"none",opacity:0})
             }
@@ -212,7 +178,7 @@ $(function(){
         if(num==0){
             flag=true;
             $(".tu4").css({
-                animation:"ship 2s ease",
+                animation:"ship 1s ease",
                 opacity:1
             });
         }else{
@@ -224,14 +190,14 @@ $(function(){
         $(".shu").each(function(index,obj){
             if(num==index+1){
                 flag=true;
-                $(obj).css({animation:"shu 2s ease",opacity:1});
+                $(obj).css({animation:"shu 1s ease",opacity:1});
             }else{
                 $(obj).css({animation:"none",opacity:0});
             }
         })
         $(".title2").each(function(index,obj){
             if(num==index+1){
-                $(obj).css({animation:"titles 2s ease",opacity:1})
+                $(obj).css({animation:"titles 1s ease",opacity:1})
             }else{
                 $(obj).css({animation:"none",opacity:0})
             }

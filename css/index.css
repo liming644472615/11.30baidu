@@ -449,6 +449,15 @@ body {
   width: 66px;
   height: 123px;
   position: absolute;
+  animation: rotates 2s ease infinite;
+}
+@keyframes rotates {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 .text {
   width: 434px;
